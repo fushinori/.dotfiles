@@ -9,18 +9,18 @@ return require('packer').startup(function(use)
     -- LSP Stuff
     use {
         'williamboman/mason.nvim',
-   	    'williamboman/mason-lspconfig.nvim',
-   	    'neovim/nvim-lspconfig',
-	    'hrsh7th/nvim-cmp', -- Autocompletion plugin
-  	    'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
- 	    'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-  	    'L3MON4D3/LuaSnip', -- Snippets plugin
+        'williamboman/mason-lspconfig.nvim',
+        'neovim/nvim-lspconfig',
+        'hrsh7th/nvim-cmp', -- Autocompletion plugin
+        'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+        'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+        'L3MON4D3/LuaSnip', -- Snippets plugin
     }
 
     -- Guess indentation style and use it
     use {
-  	    'nmac427/guess-indent.nvim',
- 	    config = function() require('guess-indent').setup {} end
+        'nmac427/guess-indent.nvim',
+         config = function() require('guess-indent').setup {} end
     }
 
     -- Show indentation guides
@@ -28,14 +28,14 @@ return require('packer').startup(function(use)
 
     -- Automatically insert pairs of parentheses, quotes etc
     use {
-	    'windwp/nvim-autopairs',
-    	config = function() require("nvim-autopairs").setup {} end
+        'windwp/nvim-autopairs',
+        config = function() require("nvim-autopairs").setup {} end
     }
 
     -- Make it easier to add comments in code
     use {
-    	'numToStr/Comment.nvim',
-    	config = function() require('Comment').setup {} end
+        'numToStr/Comment.nvim',
+        config = function() require('Comment').setup {} end
     }
 
     -- Fuzzy finder
