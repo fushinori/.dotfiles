@@ -20,4 +20,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 ]])
 
 -- Gruvbox colorscheme
-cmd("colorscheme gruvbox")
+cmd([[
+let g:gruvbox_italic = '1'
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+]])
