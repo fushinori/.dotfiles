@@ -6,8 +6,9 @@ require("phoenix")
 -- Be able to use mouse
 o.mouse = "a"
 
--- Relative line numbers
+-- Relative line numbers and current absolute line number
 o.relativenumber = true
+o.number = true
 
 -- Copy and paste using system clipboard
 o.clipboard = "unnamedplus"
@@ -25,3 +26,8 @@ let g:gruvbox_italic = '1'
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 ]])
+
+-- Highlight current line number
+o.cursorline = true
+o.cursorlineopt = "number"
+cmd("hi CursorLineNr gui=bold") -- make line number bold
