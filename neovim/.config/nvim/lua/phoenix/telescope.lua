@@ -1,3 +1,6 @@
+local status = pcall(require, 'telescope')
+if (not status) then return end
+
 -- Keybindings for telescope
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true }

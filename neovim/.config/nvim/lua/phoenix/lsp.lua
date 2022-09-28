@@ -1,11 +1,21 @@
-require("mason").setup()
-require("mason-lspconfig").setup()
+local mason_status, mason = pcall(require, 'mason')
+if (not mason_status) then return end
+
+local mason_lsp_status, mason_lspconfig = pcall(require, 'mason-lspconfig')
+if (not mason_lsp_status) then return end
+
+mason.setup()
+mason_lspconfig.setup()
+
+local status, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if (not status) then return end
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
-local lspconfig = require('lspconfig')
+local lspconfig_status, lspconfig = pcall(require, 'lspconfig')
+if (not lspconfig_status) then return end
 
 local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
@@ -46,10 +56,13 @@ lspconfig.rust_analyzer.setup {
 }
 
 -- luasnip setup
-local luasnip = require 'luasnip'
+local luasnip_status, luasnip = pcall(require, 'luasnip')
+if (not luasnip_status) then return end
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
+local cmp_status, cmp = pcall(require, 'cmp')
+if (not cmp_status) then return end
+
 cmp.setup {
   snippet = {
     expand = function(args)
