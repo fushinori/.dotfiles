@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
     -- Automatically insert pairs of parentheses, quotes etc
     use {
         'windwp/nvim-autopairs',
-        config = function() require("nvim-autopairs").setup {} end
+        config = function() require('nvim-autopairs').setup {} end
     }
 
     -- Make it easier to add comments in code
@@ -42,6 +42,11 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- Statusline
+    use {
+        'windwp/windline.nvim',
     }
 
 end)

@@ -31,3 +31,7 @@ colorscheme gruvbox
 o.cursorline = true
 o.cursorlineopt = "number"
 cmd("hi CursorLineNr gui=bold") -- make line number bold
+
+-- Don't show mode (eg: -- INSERT --)
+o.showmode = false
+
