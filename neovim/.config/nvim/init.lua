@@ -35,3 +35,7 @@ cmd("hi CursorLineNr gui=bold") -- make line number bold
 -- Don't show mode (eg: -- INSERT --)
 o.showmode = false
 
+-- Treesitter folding
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldlevel = 99 -- All folds open by default
