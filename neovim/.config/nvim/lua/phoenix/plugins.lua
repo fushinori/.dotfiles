@@ -15,12 +15,13 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
         'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
         'L3MON4D3/LuaSnip', -- Snippets plugin
+        'rafamadriz/friendly-snippets' -- Snippets collection
     }
 
     -- Guess indentation style and use it
     use {
         'nmac427/guess-indent.nvim',
-         config = function() require('guess-indent').setup {} end
+        config = function() require('guess-indent').setup {} end
     }
 
     -- Show indentation guides

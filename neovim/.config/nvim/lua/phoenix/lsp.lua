@@ -80,6 +80,7 @@ lspconfig.rust_analyzer.setup {
 -- luasnip setup
 local luasnip_status, luasnip = pcall(require, 'luasnip')
 if (not luasnip_status) then return end
+require("luasnip.loaders.from_vscode").lazy_load() -- Use snippets from friendly-snippets
 
 -- nvim-cmp setup
 local cmp_status, cmp = pcall(require, 'cmp')
