@@ -1,8 +1,7 @@
 local lspconfig_status, lspconfig = pcall(require, 'lspconfig')
 if (not lspconfig_status) then return end
 
-local cmn = require("phoenix.lsp.common")
-local on_attach, capabilities = cmn.on_attach, cmn.capabilities
+local on_attach, capabilities = unpack(require("phoenix.lsp.common"))
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = { 'pyright', 'html', 'emmet_ls', 'cssls', 'tsserver' }
