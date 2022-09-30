@@ -1,7 +1,8 @@
 local lspconfig_status, lspconfig = pcall(require, 'lspconfig')
 if (not lspconfig_status) then return end
 
-local on_attach, capabilities = unpack(require("phoenix.lsp.common"))
+local cmn = require("phoenix.lsp.common")
+local on_attach, capabilities = cmn.on_attach, cmn.capabilities
 
 lspconfig.sumneko_lua.setup {
   settings = {
