@@ -10,8 +10,8 @@ fi
 
 # History
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=20000
+SAVEHIST=10000
 setopt appendhistory
 
 # Aliases
