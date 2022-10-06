@@ -14,7 +14,7 @@ o.number = true
 o.clipboard = "unnamedplus"
 
 -- True colour
-vim.o.termguicolors = true
+o.termguicolors = true
 
 -- Gruvbox colorscheme
 cmd([[
