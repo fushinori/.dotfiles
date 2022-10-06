@@ -18,7 +18,12 @@ local on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        vim.lsp.buf.formatting_sync()
+        vim.lsp.buf.format({
+          filter = function(client)
+            -- Don't format with tsserver, we're already using prettierd
+            return client.name ~= 'tsserver'
+          end
+        })
       end,
     })
   end
