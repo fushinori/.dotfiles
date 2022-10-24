@@ -35,9 +35,6 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 # Auto CD
 setopt autocd
 
-# Vi keybindings
-bindkey -v
-
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/phoenix/.zshrc'
 
