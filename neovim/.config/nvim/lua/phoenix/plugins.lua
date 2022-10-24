@@ -55,4 +55,7 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
+  -- Markdown Previewer
+  use 'davidgranstrom/nvim-markdown-preview'
+
 end)
