@@ -50,7 +50,7 @@ export VISUAL="/usr/bin/nvim"
 ## Environment variables
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -HL -t d -E .git ."
+export FZF_ALT_C_COMMAND="fd -L -t d -E .git ."
 
 ## Keybindings and completion
 source /usr/share/fzf/key-bindings.zsh
