@@ -3,7 +3,7 @@ if (not lspconfig_status) then return end
 
 local on_attach, capabilities = unpack(require("phoenix.lsp.common"))
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   settings = {
     Lua = {
       runtime = {
@@ -12,7 +12,7 @@ lspconfig.sumneko_lua.setup {
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
