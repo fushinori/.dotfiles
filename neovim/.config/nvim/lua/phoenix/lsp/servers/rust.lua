@@ -5,8 +5,8 @@ local on_attach, capabilities = unpack(require("phoenix.lsp.common"))
 
 lspconfig.rust_analyzer.setup {
   settings = {
-    ["rust_analyzer"] = {
-      checkOnSave = {
+    ["rust-analyzer"] = {
+      check = {
         command = "clippy"
       }
     }
