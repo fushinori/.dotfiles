@@ -11,10 +11,10 @@ return require('packer').startup(function(use)
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
-    'hrsh7th/nvim-cmp', -- Autocompletion plugin
-    'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
-    'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-    'L3MON4D3/LuaSnip', -- Snippets plugin
+    'hrsh7th/nvim-cmp',            -- Autocompletion plugin
+    'hrsh7th/cmp-nvim-lsp',        -- LSP source for nvim-cmp
+    'saadparwaiz1/cmp_luasnip',    -- Snippets source for nvim-cmp
+    'L3MON4D3/LuaSnip',            -- Snippets plugin
     'rafamadriz/friendly-snippets' -- Snippets collection
   }
 
@@ -41,7 +41,7 @@ return require('packer').startup(function(use)
 
   -- Fuzzy finder
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
@@ -57,5 +57,4 @@ return require('packer').startup(function(use)
 
   -- Markdown Previewer
   use 'davidgranstrom/nvim-markdown-preview'
-
 end)
