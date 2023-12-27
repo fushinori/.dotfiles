@@ -22,10 +22,6 @@ alias nv="nvim"
 alias sl="sl -e"
 alias tp="trash-put"
 
-# ZSH Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # Powerlevel10k Theme
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
@@ -62,3 +58,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 export PATH=$PATH:$HOME/.spicetify
 export PATH=$PATH:$HOME/.local/bin
+
+# ZSH Plugins
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
