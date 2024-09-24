@@ -1,5 +1,7 @@
-local status = pcall(require, 'telescope')
-if (not status) then return end
+local status = pcall(require, "telescope")
+if not status then
+  return
+end
 
 -- Keybindings for telescope
 local keymap = vim.keymap.set
