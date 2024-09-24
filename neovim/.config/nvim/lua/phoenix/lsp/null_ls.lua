@@ -1,5 +1,7 @@
 local status, null_ls = pcall(require, "null-ls")
-if (not status) then return end
+if not status then
+  return
+end
 
 local on_attach = unpack(require("phoenix.lsp.common"))
 
@@ -18,9 +20,11 @@ local prettierd = formatting.prettierd.with({
   extra_filetypes = { "astro" },
 })
 
-local sources = { eslintd_actions, eslintd_diagnostics, prettierd }
+local stylua = null_ls.builtins.formatting.stylua
+
+local sources = { eslintd_actions, eslintd_diagnostics, prettierd, stylua }
 
 null_ls.setup({
   on_attach = on_attach,
-  sources = sources
+  sources = sources,
 })
