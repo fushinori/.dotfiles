@@ -23,7 +23,7 @@ alias sl="sl -e"
 alias tp="trash-put"
 
 # Powerlevel10k Theme
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
