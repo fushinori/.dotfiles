@@ -6,7 +6,18 @@ end
 local on_attach, capabilities = unpack(require("phoenix.lsp.common"))
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { "pyright", "html", "emmet_ls", "ts_ls", "astro", "tailwindcss", "svelte", "cssmodules_ls" }
+local servers = {
+  "pyright",
+  "html",
+  "emmet_ls",
+  "ts_ls",
+  "astro",
+  "tailwindcss",
+  "svelte",
+  "cssmodules_ls",
+  "cssls",
+  "css_variables",
+}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup({
     on_attach = on_attach,
