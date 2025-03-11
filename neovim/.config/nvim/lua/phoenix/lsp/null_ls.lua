@@ -5,24 +5,21 @@ end
 
 local on_attach = unpack(require("phoenix.lsp.common"))
 
-local code_actions = null_ls.builtins.code_actions
-local diagnostics = null_ls.builtins.diagnostics
-local formatting = null_ls.builtins.formatting
 
 -- Sources
-local eslintd_actions = code_actions.eslint_d.with({
+local eslint_actions = require("none-ls.code_actions.eslint_d").with({
   extra_filetypes = { "astro" },
 })
-local eslintd_diagnostics = diagnostics.eslint_d.with({
+local eslint_diagnostics = require("none-ls..diagnostics.eslint_d").with({
   extra_filetypes = { "astro" },
 })
-local prettierd = formatting.prettierd.with({
+local prettierd = null_ls.builtins.formatting.prettierd.with({
   extra_filetypes = { "astro" },
 })
 
 local stylua = null_ls.builtins.formatting.stylua
 
-local sources = { eslintd_actions, eslintd_diagnostics, prettierd, stylua }
+local sources = { eslint_actions, eslint_diagnostics, prettierd, stylua }
 
 null_ls.setup({
   on_attach = on_attach,
