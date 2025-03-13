@@ -5,12 +5,11 @@ end
 
 local on_attach = unpack(require("phoenix.lsp.common"))
 
-
 -- Sources
 local eslint_actions = require("none-ls.code_actions.eslint_d").with({
   extra_filetypes = { "astro" },
 })
-local eslint_diagnostics = require("none-ls..diagnostics.eslint_d").with({
+local eslint_diagnostics = require("none-ls.diagnostics.eslint_d").with({
   extra_filetypes = { "astro" },
 })
 local prettierd = null_ls.builtins.formatting.prettierd.with({
