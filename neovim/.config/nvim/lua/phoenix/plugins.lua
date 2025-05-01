@@ -56,7 +56,7 @@ return require("packer").startup(function(use)
   -- Fuzzy finder
   use({
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.4",
+    tag = "0.1.8",
     requires = { { "nvim-lua/plenary.nvim" } },
   })
 
@@ -67,7 +67,7 @@ return require("packer").startup(function(use)
   -- code actions, and more via Lua.
   use({
     "nvimtools/none-ls.nvim",
-    requires = { { "nvim-lua/plenary.nvim" }, {"nvimtools/none-ls-extras.nvim"} },
+    requires = { { "nvim-lua/plenary.nvim" }, { "nvimtools/none-ls-extras.nvim" } },
   })
 
   -- Markdown Previewer
