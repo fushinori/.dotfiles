@@ -22,9 +22,9 @@ local on_attach = function(client, bufnr)
       buffer = bufnr,
       callback = function()
         vim.lsp.buf.format({
-          filter = function(client)
+          filter = function(format_client)
             -- Don't format with these clients
-            return client.name ~= "ts_ls" and client.name ~= "lua_ls"
+            return format_client.name ~= "ts_ls" and format_client.name ~= "lua_ls"
           end,
         })
       end,
