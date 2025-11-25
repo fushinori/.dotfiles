@@ -1,8 +1,3 @@
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status then
-  return
-end
-
 local on_attach, capabilities = unpack(require("phoenix.lsp.common"))
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
@@ -15,14 +10,15 @@ local servers = {
   "tailwindcss",
   "svelte",
   "cssmodules_ls",
-  "cssls",
   "css_variables",
 }
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
+  vim.lsp.config(lsp, {
     on_attach = on_attach,
     capabilities = capabilities,
   })
+
+  vim.lsp.enable(lsp)
 end
 
 -- Common keymaps

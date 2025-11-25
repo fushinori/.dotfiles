@@ -1,11 +1,6 @@
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status then
-  return
-end
-
 local on_attach, capabilities = unpack(require("phoenix.lsp.common"))
 
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
       runtime = {
@@ -29,3 +24,5 @@ lspconfig.lua_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
+
+vim.lsp.enable("lua_ls")

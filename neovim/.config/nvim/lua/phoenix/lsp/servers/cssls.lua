@@ -1,7 +1,3 @@
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status then
-  return
-end
 local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status then
   return
@@ -16,7 +12,9 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- Add additional capabilities supported by nvim-cmp
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-lspconfig.cssls.setup({
+vim.lsp.config("cssls", {
   on_attach = on_attach,
   capabilities = capabilities,
 })
+
+vim.lsp.enable("cssls")
