@@ -22,5 +22,19 @@ vim.keymap.set("n", "<leader>fb", function()
   require("telescope").extensions.file_browser.file_browser({
     cwd = vim.fn.expand("%:p:h"),
     select_buffer = true,
+    hidden = true,
   })
 end, { desc = "Telescope file browser" })
+
+require("telescope").setup({
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+    live_grep = {
+      additional_args = function()
+        return { "--hidden" }
+      end,
+    },
+  },
+})
