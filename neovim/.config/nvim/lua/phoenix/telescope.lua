@@ -27,6 +27,9 @@ vim.keymap.set("n", "<leader>fb", function()
 end, { desc = "Telescope file browser" })
 
 require("telescope").setup({
+  defaults = {
+    file_ignore_patterns = { "%.git/" },
+  },
   pickers = {
     find_files = {
       hidden = true,
